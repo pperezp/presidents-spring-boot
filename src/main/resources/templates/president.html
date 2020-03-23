@@ -5,7 +5,7 @@
         <title>Preisentes</title>
     </head>
     <body>
-        <h1>Presidentes</h1>
+        <header th:replace="layout/template :: header"/>
 
         <!--
         th:href="@{/president/create}":
@@ -36,5 +36,7 @@
                 </td>
             </tr>
         </table>
+
+        <header th:replace="layout/template :: footer"/>
     </body>
 </html>

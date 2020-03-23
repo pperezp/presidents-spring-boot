@@ -5,7 +5,7 @@
         <title>Preisentes</title>
     </head>
     <body>
-        <h1>Datos del Presidente</h1>
+        <header th:replace="layout/template :: header"/>
 
         <a th:href="@{/president}">Volver</a>
 
@@ -41,5 +41,7 @@
 
             <input type="submit" value="Almacenar"/>
         </form>
+
+        <header th:replace="layout/template :: footer"/>
     </body>
 </html>
