@@ -52,4 +52,24 @@ public class PresidentController {
 
         return "redirect:/president";
     }
+
+    /**
+     *
+     * @param president El id entregado como PathVariable, se almacena
+     *                  automáticamente en el objeto president pasado
+     *                  por parámetro
+     * @param model
+     * @return
+     */
+    @GetMapping("/edit/{id}")
+    public String edit(President president, Model model){
+        // Rescatamos el objeto
+        president = presidentService.readById(president.getId());
+
+        // Compartimos el objeto
+        model.addAttribute("president", president);
+
+        // Llamamos a la vista
+        return "modify-president";
+    }
 }

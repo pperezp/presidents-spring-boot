@@ -31,6 +31,8 @@
             se le pasará a @PostMapping /save.
         -->
         <form th:action="@{/president/save}" method="post" th:object="${president}">
+            <input type="hidden" name="id" th:field="*{id}"/>
+
             <label for="name">Nombre: </label>
             <input type="text" name="name" th:field="*{name}"/>
 
