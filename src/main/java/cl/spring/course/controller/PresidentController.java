@@ -72,4 +72,11 @@ public class PresidentController {
         // Llamamos a la vista
         return "modify-president";
     }
+
+    @GetMapping("/delete/{id}")
+    public String delete(President president){
+        presidentService.delete(president);
+
+        return "redirect:/president";
+    }
 }

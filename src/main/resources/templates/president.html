@@ -21,13 +21,19 @@
                 <th>Nombre</th>
                 <th>Año</th>
                 <th>Editar</th>
+                <th>Eliminar</th>
             </tr>
 
             <tr th:each="president : ${presidents}">
                 <td th:text="${president.id}"></td>
                 <td th:text="${president.name}"></td>
                 <td th:text="${president.year}"></td>
-                <td><a th:href="@{/president/edit/} + ${president.id}">Editar</a></td>
+                <td>
+                    <a th:href="@{/president/edit/} + ${president.id}">Editar</a>
+                </td>
+                <td>
+                    <a th:href="@{/president/delete/} + ${president.id}">Eliminar</a>
+                </td>
             </tr>
         </table>
     </body>
